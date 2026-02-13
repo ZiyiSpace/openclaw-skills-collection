@@ -1,0 +1,8 @@
+# Python dependencies for openrouter-xiaohongshu skill
+# Currently only uses Python standard library
+# No external dependencies required
+
+# Future enhancements may include:
+# pillow  # for image processing (if needed)
+# requests  # for API calls (if using OpenRouter API)
+# beautifulsoup4  # for HTML parsing (if needed)
