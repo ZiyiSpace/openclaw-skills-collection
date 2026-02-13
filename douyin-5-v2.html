@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>抖音图文 - 第5页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #1e1e2f 0%, #2d2d44 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .card {
+            width: 1080px;
+            height: 1920px;
+            background: linear-gradient(180deg, #1e1e2f 0%, #2d2d44 100%);
+            border-radius: 40px;
+            padding: 80px 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 400px;
+            background: radial-gradient(ellipse at top, rgba(102, 126, 234, 0.3) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle at bottom right, rgba(102, 126, 234, 0.2) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(102, 126, 234, 0.2);
+            padding: 16px 28px;
+            border-radius: 25px;
+            border: 2px solid rgba(102, 126, 234, 0.3);
+            margin-bottom: 80px;
+        }
+
+        .brand-icon {
+            font-size: 36px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 2px 4px rgba(102, 126, 234, 0.3));
+        }
+
+        .brand-text {
+            font-size: 24px;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: 3px;
+        }
+
+        .section-title {
+            font-size: 56px;
+            font-weight: 900;
+            color: #ffffff;
+            line-height: 1.3;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .code-box {
+            background: linear-gradient(135deg, #2d2d44 0%, #3d3d5c 100%);
+            border-radius: 30px;
+            padding: 60px 70px;
+            border: 3px solid #667eea;
+            box-shadow: 0 8px 30px rgba(102, 126, 234, 0.5);
+            max-width: 95%;
+            word-break: break-all;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .code-box::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 36px;
+            filter: blur(20px);
+            opacity: 0.3;
+            z-index: -1;
+        }
+
+        .code {
+            font-family: 'Courier New', 'Monaco', 'Menlo', monospace;
+            font-size: 20px;
+            font-weight: 600;
+            color: #667eea;
+            line-height: 1.8;
+            letter-spacing: 1px;
+        }
+
+        .cta {
+            font-size: 38px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            padding: 30px 70px;
+            border-radius: 30px;
+            color: #ffffff;
+            letter-spacing: 2px;
+            display: inline-block;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.6);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            margin-bottom: 40px;
+        }
+
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 26px;
+            filter: blur(15px);
+            opacity: 0.4;
+            z-index: -1;
+        }
+
+        .highlight-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            width: 100%;
+        }
+
+        .highlight-item {
+            background: rgba(102, 126, 234, 0.15);
+            border-radius: 25px;
+            padding: 40px 30px;
+            text-align: center;
+            border: 2px solid rgba(102, 126, 234, 0.3);
+        }
+
+        .highlight-icon {
+            font-size: 56px;
+            margin-bottom: 20px;
+        }
+
+        .highlight-text {
+            font-size: 26px;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1.5;
+        }
+
+        .highlight-desc {
+            font-size: 20px;
+            color: #e0e0e0;
+            margin-top: 15px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(180deg, rgba(102, 126, 234, 0.1), transparent);
+            border-radius: 30px;
+            position: relative;
+            z-index: 1;
+            margin-top: 30px;
+            width: 100%;
+            border-top: 3px solid rgba(102, 126, 234, 0.3);
+        }
+
+        .hashtags {
+            font-size: 24px;
+            color: rgba(255, 255, 255, 0.6);
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .brand-icon {
+            filter: drop-shadow(0 2px 4px rgba(102, 126, 234, 0.3));
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="brand">
+            <span class="brand-icon">🚀</span>
+            <span class="brand-text">OpenClaw</span>
+        </div>
+
+        <div class="section-title">📥 一键安装</div>
+
+        <div class="code-box">
+            <div class="code">
+                npx clawhub@latest install coding-agent code-mentor debug-pro test-runner tdd-guide docker-essentials regex-patterns claude-optimised git-workflows backend-patterns
+            </div>
+        </div>
+
+        <div class="highlight-grid">
+            <div class="highlight-item">
+                <div class="highlight-icon">⚡</div>
+                <div class="highlight-text">3 分钟</div>
+                <div class="highlight-desc">全部装完</div>
+            </div>
+            <div class="highlight-item">
+                <div class="highlight-icon">🎯</div>
+                <div class="highlight-text">无复杂</div>
+                <div class="highlight-desc">配置</div>
+            </div>
+            <div class="highlight-item">
+                <div class="highlight-icon">🆓</div>
+                <div class="highlight-text">免费开源</div>
+                <div class="highlight-desc">无付费墙</div>
+            </div>
+        </div>
+
+        <div class="cta">🚀 立即安装 →</div>
+
+        <div class="footer">
+            <div class="hashtags">#OpenClaw #AI技能 #编程 #效率神器</div>
+        </div>
+
+        <div style="position: absolute; bottom: 40px; right: 60px; font-size: 32px; font-weight: 700; color: rgba(255, 255, 255, 0.3);">
+            5/5
+        </div>
+    </div>
+</body>
+</html>
