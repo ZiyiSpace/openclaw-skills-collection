@@ -1,0 +1,22 @@
+# Analytics files
+analytics/*.xlsx
+analytics/*.csv
+analytics/数据追踪-*.md
+!analytics/数据追踪模板.md
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
